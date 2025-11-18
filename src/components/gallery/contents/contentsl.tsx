@@ -39,27 +39,33 @@ export default function Contents(): JSX.Element {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-10 px-8 lg:px-16 w-full">
         {currentSlides.map((index) => (
-          <div key={index} className="mb-3 bg-white ">
+          <div key={index} className="bg-white">
             <div
-              className="h-[21.875rem] lg:h-[25.063rem] flex flex-col cursor-pointer hover:bg-gray-300"
+              className="flex flex-col cursor-pointer group"
               onClick={() => openModal(index)}
             >
-              <div className="relative w-full mb-4 h-[80%]">
-                <Image
-                  src={`/image/gallery/img (${index}).jpg`}
-                  alt="news"
-                  layout="fill"
-                  objectFit="cover"
-                />
+              {/* 1:1 Aspect Ratio Image Container */}
+              <div className="relative w-full pb-[100%] mb-3 overflow-hidden bg-gray-100">
+                <div className="absolute inset-0">
+                  <Image
+                    src={`/image/gallery/img (${index}).jpg`}
+                    alt="news"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10"></div>
               </div>
 
-              <span className="mb-4 text-lg lg:text-xl text-black max-h-20 title-text-overflow text-center">
+              <span className="mb-1.5 text-sm lg:text-base text-black line-clamp-2 text-center font-medium">
                 {body(`content${index}.title`)}
               </span>
-              <span className="mb-4 text-sm lg:text-base text-gray-500 contents-text-overflow text-center">
-              {body(`content${index}.sub`)}
+              <span className="mb-2 text-xs lg:text-sm text-gray-500 line-clamp-2 text-center">
+                {body(`content${index}.sub`)}
               </span>
             </div>
           </div>

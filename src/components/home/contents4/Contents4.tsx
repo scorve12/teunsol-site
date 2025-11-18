@@ -7,7 +7,9 @@ import Text2 from './text/text2';
 import Text3 from './text/text3';
 
 export default function Contents4() {
-  const textRefs = [useRef(null), useRef(null), useRef(null)];
+  const textRef1 = useRef(null);
+  const textRef2 = useRef(null);
+  const textRef3 = useRef(null);
 
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -44,20 +46,21 @@ export default function Contents4() {
       },
     );
 
-    textRefs.forEach((ref) => {
+    const refs = [textRef1, textRef2, textRef3];
+    refs.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
       }
     });
 
     return () => {
-      textRefs.forEach((ref) => {
+      refs.forEach((ref) => {
         if (ref.current) {
           observer.unobserve(ref.current);
         }
       });
     };
-  }, [textRefs]);
+  }, []);
 
   return (
     <>
@@ -74,7 +77,7 @@ export default function Contents4() {
               objectFit="cover"
             />
           </div>
-          <div ref={textRefs[0]} className="relative">
+          <div ref={textRef1} className="relative">
             <Text1 />
           </div>
         </div>
@@ -90,7 +93,7 @@ export default function Contents4() {
               objectFit="cover"
             />
           </div>
-          <div ref={textRefs[1]} className="relative">
+          <div ref={textRef2} className="relative">
             <Text2 />
           </div>
         </div>
@@ -103,7 +106,7 @@ export default function Contents4() {
               objectFit="cover"
             />
           </div>
-          <div ref={textRefs[2]} className="relative">
+          <div ref={textRef3} className="relative">
             <Text3 />
           </div>
         </div>

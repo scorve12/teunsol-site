@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config(); // 환경 변수 로드
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

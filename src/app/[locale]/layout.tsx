@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Noto_Sans_KR, Noto_Sans_JP } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
+import { getMessages } from 'next-intl/server';
 import LayoutFooter from '@/components/layout/footer/LayoutFooter';
 import LayoutHeader from '@/components/layout/header/LayoutHeader';
 import Script from 'next/script';
@@ -21,7 +21,6 @@ declare global {
     Kakao: any;
   }
 }
-export const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_KEY;
 
 export const metadata: Metadata = {
   title: 'Teunsol International',
@@ -45,13 +44,7 @@ export default async function LocaleLayout({
     fontClass = notoSansJp.className;
   }
 
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    console.error('Failed to load messages:', error);
-    notFound();
-  }
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
