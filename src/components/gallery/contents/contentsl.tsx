@@ -61,10 +61,10 @@ export default function Contents(): JSX.Element {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10"></div>
               </div>
 
-              <span className="mb-1.5 text-sm lg:text-base text-black line-clamp-2 text-center font-medium">
+              <span className="mb-1.5 text-xl md:text-2xl lg:text-base text-black line-clamp-2 text-center font-medium">
                 {body(`content${index}.title`)}
               </span>
-              <span className="mb-2 text-xs lg:text-sm text-gray-500 line-clamp-2 text-center">
+              <span className="mb-2 text-lg md:text-xl lg:text-sm text-gray-500 line-clamp-2 text-center">
                 {body(`content${index}.sub`)}
               </span>
             </div>
