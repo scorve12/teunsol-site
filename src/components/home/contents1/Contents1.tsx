@@ -22,10 +22,7 @@ export default function Contents1(): JSX.Element {
     '/image/ppt/img (8).jpg',
     '/image/ppt/img (9).jpg',
     '/image/ppt/img (10).jpg',
-    '/image/ppt/img (11).jpg',
-    '/image/ppt/img (12).jpg',
-    '/image/ppt/img (13).jpg',
-    '/image/ppt/img (14).jpg',
+    '/image/ppt/img (11).jpg'
   ]; // Replace with your image paths
 
   const totalSlides = images.length;
