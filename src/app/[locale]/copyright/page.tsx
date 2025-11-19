@@ -15,9 +15,8 @@ export default function Copyright() {
         <Image
           src={'/image/background/메인배경1.jpg'}
           alt="Banner"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full"
+          fill
+          className="object-cover w-full h-full"
         />
         {/* 어두운 오버레이 */}
         <div className="absolute inset-0 bg-black opacity-40"></div>

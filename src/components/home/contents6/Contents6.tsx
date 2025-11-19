@@ -11,8 +11,8 @@ export default function Contents6() {
           <Image
             src="/image/home/contents6/img1.jpg"
             alt="contents6"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
         </div>
         <Text1 />

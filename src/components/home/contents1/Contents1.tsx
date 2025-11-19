@@ -112,9 +112,8 @@ export default function Contents1(): JSX.Element {
           <Image
             src="/image/home/contents1/img1.jpg"
             alt="contents1"
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-700 group-hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
@@ -160,8 +159,8 @@ export default function Contents1(): JSX.Element {
           <Image
             src="/image/home/contents1/img2.jpg"
             alt="contents1"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
           {/* Gradient Overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white/20"></div>
@@ -238,9 +237,8 @@ export default function Contents1(): JSX.Element {
                   <Image
                     src={images[currentSlide]}
                     alt={`Slide ${currentSlide + 1}`}
-                    layout="fill"
-                    objectFit="contain"
-                    className="transition-opacity duration-300"
+                    fill
+                    className="object-contain transition-opacity duration-300"
                   />
                 </div>
 

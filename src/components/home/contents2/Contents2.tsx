@@ -10,8 +10,8 @@ export default function Contents2() {
         <Image
           src="/image/home/contents2/img1.jpg"
           alt="contents1"
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
         <div className="relative z-10 flex flex-col w-2/3 h-full pt-14 lg:pt-24 text-white">
           <span className="mb-4 text-xl lg:text-4xl font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">

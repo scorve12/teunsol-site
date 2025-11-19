@@ -9,8 +9,7 @@ export default function Contents(): JSX.Element {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16; // 페이지당 표시할 슬라이드 수
   const slides = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
   ]; // 전체 슬라이드
   const totalPages = Math.ceil(slides.length / itemsPerPage);
 
@@ -52,9 +51,8 @@ export default function Contents(): JSX.Element {
                   <Image
                     src={`/image/gallery/img (${index}).jpg`}
                     alt="news"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 {/* Hover Overlay */}
@@ -107,8 +105,8 @@ export default function Contents(): JSX.Element {
               <Image
                   src={`/image/gallery/img (${selectedSlide}).jpg`}
                   alt="news"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="lg:pl-4 flex flex-col justify-center lg:w-1/2">

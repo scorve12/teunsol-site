@@ -73,8 +73,8 @@ export default function Contents4() {
             <Image
               src="/image/home/contents4/img1.jpg"
               alt="img1"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
           <div ref={textRef1} className="relative">
@@ -89,8 +89,8 @@ export default function Contents4() {
             <Image
               src="/image/home/contents4/img2.jpg"
               alt="img2"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
           <div ref={textRef2} className="relative">
@@ -102,8 +102,8 @@ export default function Contents4() {
             <Image
               src="/image/home/contents4/img3.jpg"
               alt="img3"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
           <div ref={textRef3} className="relative">
@@ -132,8 +132,8 @@ export default function Contents4() {
                 <Image
                   src="/image/home/contents4/img1.jpg"
                   alt="img1"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="lg:pl-4 flex flex-col justify-center lg:w-1/2">
@@ -169,8 +169,8 @@ export default function Contents4() {
                 <Image
                   src="/image/home/contents4/img2.jpg"
                   alt="img2"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="lg:pl-4 flex flex-col justify-center lg:w-1/2">

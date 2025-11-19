@@ -60,8 +60,8 @@ export default function BackgroundImage({
         <Image
           src={images[currentImage]}
           alt="Background image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
       </div>
       {children}

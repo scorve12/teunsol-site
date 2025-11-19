@@ -49,8 +49,8 @@ export default function Contents(): JSX.Element {
                 <Image
                   src={`/image/news/img (${index}).jpg`}
                   alt="news"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <span className="mb-2 text-sm lg:text-base text-orange-400">
@@ -103,8 +103,8 @@ export default function Contents(): JSX.Element {
                 <Image
                   src={`/image/news/img (${selectedSlide}).jpg`}
                   alt="news"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="lg:pl-4 flex flex-col justify-center lg:w-1/2">
