@@ -1,63 +1,219 @@
 {
   "Header": {
-    "Nav1": "Introduction",
+    "Nav1": "About",
     "Nav2": "Visit",
     "Nav3": "Gallery",
     "Nav4": "Copyright",
     "Nav5": "News",
-    "bannerText1": "We seek sustainable growth. We connect the world",
-    "bannerText2-1": "at the center of it ",
-    "bannerText2-2": "TeunSol",
-    "bannerText2-3": ".",
+    "bannerText1": "Overseas Project Management (PM) and New Business Connections",
+    "bannerText2-1": "At the center of it all, ",
+    "bannerText2-2": "TEUNSOL",
+    "bannerText2-3": " is here.",
     "bannerText3": "TEUNSOL IS THE CENTER OF PROGRESS."
   },
   "Footer": {
-    "Text1": "개인정보취급방침 | 이메일무단수집거부 | CONTACT US",
+    "Text1": "Privacy Policy | Email Collection Refusal | CONTACT US",
     "Text2": "32, Pyeongdongsandan-ro 143beon-gil, Gwangsan-gu, Gwangju TEL : 010-2326-3466",
-    "Text3": "담당자 : 한국인 - 한국어, English, French (010-2326-3466)",
-    "Text4": "우즈벡인 - 한국어, Russian, Uzbek ,French",
+    "Text3": "Contact: Korean - Korean, English, French (010-2326-3466)",
+    "Text4": "Uzbek - Korean, Russian, Uzbek, French",
     "Text5": "Email: tsi2016@teunsol.co.kr",
     "Text6": "Phone: +82-(0)10-2326-3466",
     "Text7": "www.teunsol.co.kr"
   },
   "MainBodyContents1": {
-    "Text1": "by numbers",
-    "Text2": "TeunSol",
-    "Text3": "예시문구1",
-    "Text4": "예시문구2"
+    "Text1": "Uzbekistan Tour &",
+    "Text2": "Business",
+    "Text3": "Sample text 1",
+    "Text4": "Sample text 2"
   },
   "MainBodyContents2": {
-    "Text1": "삶의 가치를 높이는 기업, 튼솔이 언제, 어디서나 함께하고 있습니다."
+    "Text1": "A company that enhances the value of life, TEUNSOL is with you anytime, anywhere."
   },
   "MainBodyContents3": {
-    "Text1": "고객이 주신 사랑, 최고의 품질로 보답하겠습니다."
+    "Text1": "We will repay the love you have given us with the highest quality."
   },
   "MainBodyContents4": {
-    "Text1": "투자정보",
-    "Text2": "경영이념",
-    "Text3": "Teunsol 네트워크"
+    "Text1": "Investment Information",
+    "Text2": "Management Philosophy",
+    "Text3": "TEUNSOL Network"
   },
   "MainBodyContents6": {
-    "Text1": "고객센터",
-    "Text2": "고객의 원할한 업무진행을 위해 최선을 다하겠습니다."
+    "Text1": "Customer Service",
+    "Text2": "We will do our best to ensure smooth business operations for our customers."
   },
   "Consultation": {
     "Text1": "Directions",
-    "Text2": "We will listen to our customers.",
-    "Text3": "Address and main phone number",
-    "Text4": "32 Pyeongdongsandan-ro 143beon-gil, Gwangsan-gu, Gwangju",
-    "Text5": "Main phone number: 010-2326-3466",
-    "Text6": "We will listen to our customers.",
-    "Text7": "Public transportation information",
-    "Text8": "subway: Line 5 Seodaemun Station Exit 1",
-    "Text9": "Bus: Seodaemun Station Street stop"
+    "Text2": "We will listen to our customers' voices.",
+    "Text3": "Address and Main Phone",
+    "Text4": "32, Pyeongdongsandan-ro 143beon-gil, Gwangsan-gu, Gwangju",
+    "Text5": "Main Phone: 010-2326-3466",
+    "Text6": "Public Transportation",
+    "Text7": "Public Transportation Guide",
+    "Text8": "Subway: Gwangju Line 1, Pyeongdong Station Exit 3, 200m",
+    "Text9": "Bus: Pyeongdong Station (East), Air Force Base Back Gate"
   },
   "Copyright": {
-    "Text1": "로고",
-    "Text2": "삶의 가치를 높이는 기업, 튼솔이 언제, 어디서나 함께하고 있습니다."
+    "Text1": "Logo",
+    "Text2": "A company that enhances the value of life, TEUNSOL is with you anytime, anywhere."
   },
   "News": {
     "Text1": "NEWS",
-    "Text2": "삶의 가치를 높이는 기업, 튼솔이 언제, 어디서나 함께하고 있습니다."
+    "Text2": "A company that enhances the value of life, TEUNSOL is with you anytime, anywhere.",
+    "content1": {
+      "title": "Uzbekistan Early Childhood Education Department",
+      "sub": "MOU signed with the Uzbekistan Early Childhood Education Department."
+    },
+    "content2": {
+      "title": "Scholarship Support Project",
+      "sub": "Collaboration with Samarkand State University, Uzbekistan."
+    },
+    "content3": {
+      "title": "MOU with Tourism Business Department",
+      "sub": "2021. MOU signed with Samarkand Province Investment and Tourism Business Department."
+    },
+    "content4": {
+      "title": "MOU with Samarkand Labor Migration Department",
+      "sub": "MOU signed with the Labor Migration Department in Samarkand."
+    },
+    "content5": {
+      "title": "MOU with Local Major Travel Agency SSST",
+      "sub": "MOU signed with SSST, a major local travel agency in Samarkand. 2021."
+    },
+    "content6": {
+      "title": "With the Ambassador of Uzbekistan to Korea and his wife",
+      "sub": "August 2024. Attended the celebration of the 33rd anniversary of Uzbekistan's independence and the 32nd anniversary of diplomatic relations with Korea"
+    },
+    "content7": {
+      "title": "MOU with Samarkand Provincial Government Early Childhood Education Department",
+      "sub": "MOU signed with Samarkand Provincial Government Early Childhood Education Department in 2021."
+    },
+    "content8": {
+      "title": "title",
+      "sub": "sub."
+    }
+  },
+  "Gallery": {
+    "Text1": "GALLERY",
+    "Text2": "A company that enhances the value of life, TEUNSOL is with you anytime, anywhere.",
+    "content1": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content2": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content3": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content4": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content5": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content6": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content7": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content8": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content9": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content10": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content11": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content12": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content13": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content14": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content15": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content16": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content17": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content18": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content19": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content20": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content21": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content22": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content23": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content24": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content25": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content26": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content27": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content28": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content29": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    },
+    "content30": {
+      "title": "Uzbekistan",
+      "sub": "Nurata Desert."
+    }
   }
 }
