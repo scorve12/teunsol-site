@@ -25,9 +25,13 @@ declare global {
 export const metadata: Metadata = {
   title: 'Teunsol International',
   description: 'Global Project Management',
+  icons: {
+    icon: '/image/svg/Logo1.svg',
+  },
   openGraph: {
     title: 'Teunsol International',
     description: 'Global Project Management',
+    images: ['/image/svg/Logo1.svg'],
   },
 };
 
