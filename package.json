@@ -15,7 +15,7 @@
     "react-dom": "^19.3.1",
     "react-icons": "^5.2.1",
     "react-kakao-maps-sdk": "^1.2.2",
-    "react-slick": "^0.31.0",
+    "react-slick": "^0.30.3",
     "sharp": "^0.35.5",
     "slick-carousel": "^1.8.1"
   },
