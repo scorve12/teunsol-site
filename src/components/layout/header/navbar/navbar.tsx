@@ -1,13 +1,13 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { isMainPage as checkMainPage } from '@/lib/isMainPage';
 import React, { useEffect, useState } from 'react';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const isMainPage =
-    pathname === '/' || pathname === '/ko' || pathname === '/en';
+  const isMainPage = checkMainPage(pathname);
 
   useEffect(() => {
     const handleScroll = () => {

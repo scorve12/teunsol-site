@@ -23,6 +23,17 @@
         
         
 
+## 로컬 실행
+```bash
+cp .env.example .env   # NEXT_PUBLIC_KAKAO_KEY 입력 (방문 페이지 지도)
+npm ci
+npm run dev            # http://localhost:3000
+npm run build && npm start
+```
+
+- 지원 언어: `ko`(기본), `en` — `src/i18n/locales.ts`
+- 번역 문구: `src/messages/{ko,en}.json`
+
 ### License
 
 This Repository is [MIT licensed](./LICENSE).

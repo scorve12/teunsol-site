@@ -50,6 +50,7 @@ export default function Contents(): JSX.Element {
                   src={`/image/news/img (${index}).jpg`}
                   alt="news"
                   fill
+                  sizes="(min-width: 1024px) 20vw, (min-width: 768px) 35vw, 70vw"
                   className="object-cover"
                 />
               </div>
@@ -104,6 +105,7 @@ export default function Contents(): JSX.Element {
                   src={`/image/news/img (${selectedSlide}).jpg`}
                   alt="news"
                   fill
+                  sizes="(min-width: 1024px) 450px, 80vw"
                   className="object-cover"
                 />
               </div>

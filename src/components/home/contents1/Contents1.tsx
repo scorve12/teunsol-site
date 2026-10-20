@@ -2,37 +2,30 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+// 모달 슬라이드 이미지
+const images = Array.from(
+  { length: 11 },
+  (_, i) => `/image/ppt/img (${i + 1}).jpg`,
+);
+const totalSlides = images.length;
 
 export default function Contents1(): JSX.Element {
-  const [count, setCount] = useState(0);
+  const body = useTranslations('MainBodyContents1');
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const leftSectionRef = useRef(null);
   const rightSectionRef = useRef(null);
 
-  const images = [
-    '/image/ppt/img (1).jpg',
-    '/image/ppt/img (2).jpg',
-    '/image/ppt/img (3).jpg',
-    '/image/ppt/img (4).jpg',
-    '/image/ppt/img (5).jpg',
-    '/image/ppt/img (6).jpg',
-    '/image/ppt/img (7).jpg',
-    '/image/ppt/img (8).jpg',
-    '/image/ppt/img (9).jpg',
-    '/image/ppt/img (10).jpg',
-    '/image/ppt/img (11).jpg'
-  ]; // Replace with your image paths
-
-  const totalSlides = images.length;
-
+  // 처음/끝에서 멈춤 (버튼 disabled 처리와 동일하게 동작)
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
 
   useEffect(() => {
@@ -59,23 +52,8 @@ export default function Contents1(): JSX.Element {
       observer.observe(rightSection);
     }
 
-    return () => {
-      if (leftSection) {
-        observer.unobserve(leftSection);
-      }
-      if (rightSection) {
-        observer.unobserve(rightSection);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isIntersecting && count < 120) {
-      timer = setTimeout(() => setCount(count + 1), 1000 / 120);
-    }
-    return () => clearTimeout(timer);
-  }, [count, isIntersecting]);
 
   // Keyboard navigation for modal
   useEffect(() => {
@@ -83,17 +61,17 @@ export default function Contents1(): JSX.Element {
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
-        prevSlide();
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
       } else if (e.key === 'ArrowRight') {
-        nextSlide();
+        setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
       } else if (e.key === 'Escape') {
-        closeModal();
+        setIsModalOpen(false);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isModalOpen, currentSlide]);
+  }, [isModalOpen]);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -110,6 +88,7 @@ export default function Contents1(): JSX.Element {
             src="/image/home/contents1/img1.jpg"
             alt="contents1"
             fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           {/* Gradient Overlay */}
@@ -126,7 +105,7 @@ export default function Contents1(): JSX.Element {
               }`}
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-white text-center leading-relaxed font-light tracking-wide">
-                Project management for the tooling of Automotive
+                {body('LeftTitle')}
               </h2>
             </header>
 
@@ -157,6 +136,7 @@ export default function Contents1(): JSX.Element {
             src="/image/home/contents1/img2.jpg"
             alt="contents1"
             fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
           {/* Gradient Overlay for better text readability */}
@@ -173,7 +153,7 @@ export default function Contents1(): JSX.Element {
                     : 'opacity-0 -translate-y-4'
                 }`}
               >
-                Uzbekistan Business and Tour
+                {body('RightTitle')}
               </h2>
             </div>
 
@@ -186,7 +166,7 @@ export default function Contents1(): JSX.Element {
               }`}
             >
               <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-700 text-center font-light tracking-wide">
-                어린이집 후원 및 교육기관 지원
+                {body('RightFooter')}
               </p>
             </footer>
           </div>
@@ -235,6 +215,7 @@ export default function Contents1(): JSX.Element {
                     src={images[currentSlide]}
                     alt={`Slide ${currentSlide + 1}`}
                     fill
+                    sizes="(min-width: 1024px) 1100px, 95vw"
                     className="object-contain transition-opacity duration-300"
                   />
                 </div>

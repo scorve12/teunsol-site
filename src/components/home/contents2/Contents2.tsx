@@ -11,6 +11,7 @@ export default function Contents2() {
           src="/image/home/contents2/img1.jpg"
           alt="contents1"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="relative z-10 flex flex-col w-2/3 h-full pt-14 lg:pt-24 text-white">

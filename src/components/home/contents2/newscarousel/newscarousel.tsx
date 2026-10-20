@@ -87,6 +87,7 @@ export default function NewsCarousel(): JSX.Element {
                   src={`/image/news/img (${index}).jpg`}
                   alt="news"
                   fill
+                  sizes="(min-width: 1024px) 17vw, (min-width: 600px) 33vw, 66vw"
                   className="object-cover"
                 />
               </div>
@@ -124,6 +125,7 @@ export default function NewsCarousel(): JSX.Element {
                   src={`/image/news/img (${selectedSlide}).jpg`}
                   alt="news"
                   fill
+                  sizes="(min-width: 1024px) 450px, 80vw"
                   className="object-cover"
                 />
               </div>
