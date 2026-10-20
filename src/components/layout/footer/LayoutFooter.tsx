@@ -13,27 +13,27 @@ export default function LayoutFooter() {
   return (
     <>
       {/* 푸터 */}
-      <footer className="w-screen h-auto space-y-4 py-6 text-[#FFFFFF99] bg-[#2E2E2E] flex flex-col items-center justify-center">
-        <div className="flex justify-start w-1/2 text-sm">
+      <footer className="w-full h-auto space-y-3 md:space-y-4 py-8 px-6 text-[#FFFFFF99] bg-[#2E2E2E] flex flex-col items-center justify-center">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text1 />
         </div>
-        <div className="w-1/2 border-t border-gray-700 "></div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="w-full max-w-3xl border-t border-gray-700 "></div>
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text2 />
         </div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text3 />
         </div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text4 />
         </div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text5 />
         </div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text6 />
         </div>
-        <div className="flex justify-start w-1/2 text-sm">
+        <div className="flex justify-start w-full max-w-3xl text-sm">
           <Text7 />
         </div>
 

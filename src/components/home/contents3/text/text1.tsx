@@ -6,7 +6,7 @@ export default function Text1() {
 
   return (
     <>
-      <span className="text-lg lg:text-2xl text-gray-500">{body('Text1')}</span>
+      <span className="text-lg lg:text-2xl text-gray-500 text-balance">{body('Text1')}</span>
     </>
   );
 }

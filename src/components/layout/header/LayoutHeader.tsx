@@ -25,23 +25,17 @@ export default function LayoutHeader() {
       <header className={`w-screen  ${headerHeight} relative z-30  `}>
         {/* 배경 이미지 및 텍스트 */}
         <BackgroundImage>
-          <div className="absolute inset-0 flex items-center justify-center mb-12 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">
-            <div className="text-white text-center h-40 flex flex-col justify-between">
-              <span className="text-lg sm:text-xl md:text-3xl mb-4">
+          <div className="absolute inset-0 flex items-center justify-center px-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">
+            <div className="max-w-5xl text-white text-center flex flex-col items-center gap-4 md:gap-6">
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 {header('bannerText1')}
               </span>
-              <br />
-              <span className="text-2xl sm:text-3xl md:text-6xl">
+              <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-balance">
                 {header('bannerText2-1')}
-                <span className="text-2xl sm:text-3xl md:text-6xl font-semibold">
-                  {header('bannerText2-2')}
-                </span>
-                <span className="text-2xl sm:text-3xl md:text-6xl">
-                  {header('bannerText2-3')}
-                </span>
-                <br />
+                <span className="font-semibold">{header('bannerText2-2')}</span>
+                {header('bannerText2-3')}
               </span>
-              <span className="text-xs sm:text-sm md:text-lg font-semibold mt-4">
+              <span className="text-xs sm:text-sm md:text-lg font-semibold tracking-wide">
                 {header('bannerText3')}
               </span>
             </div>
