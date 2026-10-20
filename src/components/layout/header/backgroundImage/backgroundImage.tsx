@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { isMainPage as checkMainPage } from '@/lib/isMainPage';
 
 export default function BackgroundImage({
   children,
@@ -46,8 +47,7 @@ export default function BackgroundImage({
   }, [opacity, nextImage, images.length]);
 
   const pathname = usePathname();
-  const isMainPage =
-    pathname === '/' || pathname === '/ko' || pathname === '/en';
+  const isMainPage = checkMainPage(pathname);
 
   return (
     <div
@@ -61,6 +61,7 @@ export default function BackgroundImage({
           src={images[currentImage]}
           alt="Background image"
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

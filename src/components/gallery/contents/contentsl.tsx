@@ -52,6 +52,7 @@ export default function Contents(): JSX.Element {
                     src={`/image/gallery/img (${index}).jpg`}
                     alt="news"
                     fill
+                    sizes="(min-width: 1024px) 20vw, (min-width: 768px) 35vw, 70vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -106,6 +107,7 @@ export default function Contents(): JSX.Element {
                   src={`/image/gallery/img (${selectedSlide}).jpg`}
                   alt="news"
                   fill
+                  sizes="(min-width: 1024px) 450px, 80vw"
                   className="object-cover"
                 />
               </div>

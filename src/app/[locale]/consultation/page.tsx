@@ -15,6 +15,7 @@ export default function Consultation() {
           src={'/image/background/메인배경1.jpg'}
           alt="Banner"
           fill
+          sizes="100vw"
           className="object-cover w-full h-full"
         />
         {/* 어두운 오버레이 */}

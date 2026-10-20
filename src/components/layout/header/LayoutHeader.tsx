@@ -9,14 +9,14 @@ import TransLocale from './transLocale/transLocale';
 import HamburgerMenu from './hamburgerMenu/hamburgerMenu';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
+import { isMainPage as checkMainPage } from '@/lib/isMainPage';
 
 export default function LayoutHeader() {
   const header = useTranslations('Header');
   const params = useParams<{ locale: string }>();
   const locale = params.locale;
   const pathname = usePathname();
-  const isMainPage =
-    pathname === '/' || pathname === '/ko' || pathname === '/en';
+  const isMainPage = checkMainPage(pathname);
 
   const headerHeight = isMainPage ? 'h-[60vh] lg:h-[100vh]' : 'h-16 md:h-20 ';
   return (
@@ -76,7 +76,7 @@ export default function LayoutHeader() {
                 <span className="cursor-pointer">{header('Nav3')}</span>
               </Link>
             )}
-            {pathname === `/${locale}c` ? (
+            {pathname === `/${locale}/copyright` ? (
               <span className="cursor-pointer">{header('Nav4')}</span>
             ) : (
               <Link href={`/${locale}/copyright`}>
