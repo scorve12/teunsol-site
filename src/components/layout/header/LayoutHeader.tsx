@@ -18,7 +18,7 @@ export default function LayoutHeader() {
   const pathname = usePathname();
   const isMainPage = checkMainPage(pathname);
 
-  const headerHeight = isMainPage ? 'h-[60vh] lg:h-[100vh]' : 'h-16 md:h-20 ';
+  const headerHeight = isMainPage ? 'h-[60vh] lg:h-screen' : 'h-16 md:h-20 ';
   return (
     <>
       {/* 헤더 */}

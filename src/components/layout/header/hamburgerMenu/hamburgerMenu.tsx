@@ -33,7 +33,7 @@ export default function HamburgerMenu() {
       {/* 모달 오버레이 */}
       {dropdownOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black/50 z-40"
           onClick={closeDropdown}
         ></div>
       )}
@@ -43,13 +43,13 @@ export default function HamburgerMenu() {
           dropdownOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="h-[5%] px-4 bg-black flex justify-between items-center border-b-[1px] border-gray-400 text-sm ">
+        <div className="h-[5%] px-4 bg-black flex justify-between items-center border-b border-gray-400 text-sm ">
           <span>Teunsol International</span>
           <span className="text-base cursor-pointer " onClick={closeDropdown}>
             X
           </span>
         </div>
-          <div className="text-sm h-[6.7%] border-b-[1px] border-gray-700 flex items-center px-4 cursor-pointer ">
+          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer ">
             {pathname === `/${locale}` ? (
               <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav1')}</span>
             ) : (
@@ -58,7 +58,7 @@ export default function HamburgerMenu() {
               </Link>
             )}
           </div>      
-          <div className="text-sm h-[6.7%] border-b-[1px] border-gray-700 flex items-center px-4 cursor-pointer ">
+          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer ">
           {pathname === `/${locale}/consultation` ? (
               <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav2')}</span>
             ) : (
@@ -67,7 +67,7 @@ export default function HamburgerMenu() {
               </Link>
             )}
           </div>
-          <div className="text-sm h-[6.7%] border-b-[1px] border-gray-700 flex items-center px-4 cursor-pointer  ">
+          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">
           {pathname === `/${locale}/gallery` ? (
               <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav3')}</span>
             ) : (
@@ -76,7 +76,7 @@ export default function HamburgerMenu() {
               </Link>
             )}
           </div>
-          <div className="text-sm h-[6.7%] border-b-[1px] border-gray-700 flex items-center px-4 cursor-pointer  ">
+          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">
           {pathname === `/${locale}/copyright` ? (
               <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav4')}</span>
             ) : (
@@ -85,7 +85,7 @@ export default function HamburgerMenu() {
               </Link>
             )}
           </div>
-          <div className="text-sm h-[6.7%] border-b-[1px] border-gray-700 flex items-center px-4 cursor-pointer  ">      
+          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">      
           {pathname === `/${locale}/news` ? (
               <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav5')}</span>
             ) : (

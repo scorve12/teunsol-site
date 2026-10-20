@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-export default function Text3(): JSX.Element {
+export default function Text3() {
   const footer = useTranslations('Footer');
 
   return (

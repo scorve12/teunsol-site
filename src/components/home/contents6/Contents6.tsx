@@ -6,7 +6,7 @@ import Text2 from './text/text2';
 export default function Contents6() {
   return (
     <>
-      <section className="h-[18.75rem] md:h-[23.75rem] w-screen flex justify-center items-center flex-col relative group overflow-hidden">
+      <section className="h-75 md:h-95 w-screen flex justify-center items-center flex-col relative group overflow-hidden">
         <div className="absolute w-full h-full transition-transform duration-1000 ease-in-out group-hover:scale-110">
           <Image
             src="/image/home/contents6/img1.jpg"

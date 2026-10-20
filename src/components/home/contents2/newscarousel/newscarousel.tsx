@@ -53,7 +53,7 @@ const settings = {
   ],
 };
 
-export default function NewsCarousel(): JSX.Element {
+export default function NewsCarousel() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   // 테스트를 위한 임시 배열
@@ -79,10 +79,10 @@ export default function NewsCarousel(): JSX.Element {
             className="relative px-1 lg:px-4 xl:px-6 2xl:px-8 pt-14 "
           >
             <div
-              className="h-[21.875rem] lg:h-[25.063rem] flex flex-col cursor-pointer  hover:bg-gray-100 "
+              className="h-87.5 lg:h-[25.063rem] flex flex-col cursor-pointer  hover:bg-gray-100 "
               onClick={() => openModal(index)}
             >
-              <div className="relative w-full mb-4 h-[9.5rem]">
+              <div className="relative w-full mb-4 h-38">
                 <Image
                   src={`/image/news/img (${index}).jpg`}
                   alt="news"
@@ -106,7 +106,7 @@ export default function NewsCarousel(): JSX.Element {
       </Slider>
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal}
         >
           <div

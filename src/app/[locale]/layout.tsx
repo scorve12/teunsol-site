@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import LayoutFooter from '@/components/layout/footer/LayoutFooter';
 import LayoutHeader from '@/components/layout/header/LayoutHeader';
 
@@ -37,17 +36,17 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const messages = await getMessages();
+  const { locale } = await params;
 
   return (
     <html lang={locale}>
       <body className={notoSansKr.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider>
           <LayoutHeader />
           {children}
           <LayoutFooter />

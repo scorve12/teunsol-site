@@ -114,7 +114,7 @@ export default function Contents4() {
 
       {isOpen1 && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal1}
         >
           <div
@@ -151,7 +151,7 @@ export default function Contents4() {
 
       {isOpen2 && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal2}
         >
           <div

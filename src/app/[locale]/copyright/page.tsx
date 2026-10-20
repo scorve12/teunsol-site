@@ -11,7 +11,7 @@ export default function Copyright() {
     <div className="w-full pb-44 flex flex-col items-center">
       {/* 배너 이미지 */}
 
-      <div className="relative w-full h-[15rem] ">
+      <div className="relative w-full h-60 ">
         <Image
           src={'/image/background/메인배경1.jpg'}
           alt="Banner"
@@ -26,7 +26,7 @@ export default function Copyright() {
       <div className="flex flex-col w-[70vw] mt-28 ">
         <h1 className="font-bold text-2xl">{body('Text1')}</h1>
         <h2 className="font-medium text-lg">{body('Text2')}</h2>
-        <div className="w-auto h-60 border-[1px] border-slate-200 mt-20 flex items-center justify-center ">
+        <div className="w-auto h-60 border border-slate-200 mt-20 flex items-center justify-center ">
           <div className="w-44 h-44 mr-24">
             <Logo1 className="w-full h-full object-contain" />
           </div>

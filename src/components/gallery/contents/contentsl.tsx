@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function Contents(): JSX.Element {
+export default function Contents() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -88,7 +88,7 @@ export default function Contents(): JSX.Element {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal}
         >
           <div
