@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-export default function Text2(): JSX.Element {
+export default function Text2() {
   const body = useTranslations('MainBodyContents6');
 
   return (

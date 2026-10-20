@@ -11,7 +11,7 @@ const images = Array.from(
 );
 const totalSlides = images.length;
 
-export default function Contents1(): JSX.Element {
+export default function Contents1() {
   const body = useTranslations('MainBodyContents1');
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

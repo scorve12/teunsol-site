@@ -53,7 +53,7 @@ const settings = {
   ],
 };
 
-export default function NewsCarousel(): JSX.Element {
+export default function NewsCarousel() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   // 테스트를 위한 임시 배열
