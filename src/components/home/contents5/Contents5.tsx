@@ -3,7 +3,7 @@ import Logo from '../../../../public/image/svg/Logo1.svg';
 export default function Contents5() {
   return (
     <>
-      <section className="h-[16.875rem] md:h-[20.25rem] w-screen flex flex-col md:flex-row">
+      <section className="h-67.5 md:h-81 w-screen flex flex-col md:flex-row">
         <div className="my-5 md:my-0 w-full md:w-1/3 h-1/3 md:h-auto md:bg-gray-200 flex justify-center items-center">
           <span className="text-gray-600 text-2xl md:text-4xl">
             CERTIFICATION

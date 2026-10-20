@@ -6,7 +6,7 @@ import Text1 from './text/text1';
 export default function Contents2() {
   return (
     <>
-      <section className="h-[40.625rem] lg:h-[47.75rem] w-screen flex justify-center items-center relative">
+      <section className="h-162.5 lg:h-191 w-screen flex justify-center items-center relative">
         <Image
           src="/image/home/contents2/img1.jpg"
           alt="contents1"

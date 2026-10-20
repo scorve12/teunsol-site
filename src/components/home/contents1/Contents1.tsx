@@ -78,7 +78,7 @@ export default function Contents1() {
 
   return (
     <>
-      <section className="h-[24rem] md:h-[26rem] lg:h-[30rem] flex flex-col lg:flex-row gap-0">
+      <section className="h-96 md:h-104 lg:h-120 flex flex-col lg:flex-row gap-0">
         {/* Left Content */}
         <div
           ref={leftSectionRef}
@@ -92,7 +92,7 @@ export default function Contents1() {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/70"></div>
 
           {/* Content Container */}
           <div className="relative z-10 w-full h-full flex flex-col justify-between py-6 lg:py-8 px-6 lg:px-8">
@@ -119,7 +119,7 @@ export default function Contents1() {
             >
               <button
                 onClick={openModal}
-                className="flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24 border-2 border-white/80 rounded-full text-white text-sm lg:text-base font-light tracking-wider cursor-pointer transition-all duration-300 hover:scale-105 hover:border-orange-400 hover:text-orange-400 hover:bg-white/10 backdrop-blur-sm"
+                className="flex justify-center items-center w-20 h-20 lg:w-24 lg:h-24 border-2 border-white/80 rounded-full text-white text-sm lg:text-base font-light tracking-wider cursor-pointer transition-all duration-300 hover:scale-105 hover:border-orange-400 hover:text-orange-400 hover:bg-white/10 backdrop-blur-xs"
               >
                 Touch
               </button>
@@ -140,7 +140,7 @@ export default function Contents1() {
             className="object-cover"
           />
           {/* Gradient Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white/20"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-white/20"></div>
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full">
@@ -159,7 +159,7 @@ export default function Contents1() {
 
             {/* Footer Section */}
             <footer
-              className={`bg-white/95 backdrop-blur-sm py-3 lg:py-4 px-6 flex justify-center items-center transition-all duration-500 delay-150 ease-out ${
+              className={`bg-white/95 backdrop-blur-xs py-3 lg:py-4 px-6 flex justify-center items-center transition-all duration-500 delay-150 ease-out ${
                 isIntersecting
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-4'
@@ -176,12 +176,12 @@ export default function Contents1() {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-xs"
           onClick={closeModal}
         >
           {/* Modal Container */}
           <div
-            className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-2xl w-[95vw] h-[90vh] max-w-6xl mx-auto overflow-hidden"
+            className="relative bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl shadow-2xl w-[95vw] h-[90vh] max-w-6xl mx-auto overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -290,8 +290,8 @@ export default function Contents1() {
 
                 {/* Keyboard Hint */}
                 <div className="hidden lg:flex items-center space-x-2 text-xs text-gray-500">
-                  <kbd className="px-2 py-1 bg-white rounded shadow-sm border border-gray-200">←</kbd>
-                  <kbd className="px-2 py-1 bg-white rounded shadow-sm border border-gray-200">→</kbd>
+                  <kbd className="px-2 py-1 bg-white rounded-sm shadow-xs border border-gray-200">←</kbd>
+                  <kbd className="px-2 py-1 bg-white rounded-sm shadow-xs border border-gray-200">→</kbd>
                   <span>to navigate</span>
                 </div>
               </div>

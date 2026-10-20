@@ -10,7 +10,7 @@ export default function Consultation() {
     <div className="w-full pb-44">
       {/* 배너 이미지 */}
 
-      <div className="relative w-full h-[25rem] ">
+      <div className="relative w-full h-100 ">
         <Image
           src={'/image/background/메인배경1.jpg'}
           alt="Banner"
@@ -32,7 +32,7 @@ export default function Consultation() {
       <div className="px-[10vw] mt-[-100px] bg-white">
         <KakaoMap />
 
-        <div className="w-[100%] mt-8 mb-8 h-[3.5px] bg-[#5d5d5d]"></div>
+        <div className="w-full mt-8 mb-8 h-[3.5px] bg-[#5d5d5d]"></div>
         <div className="mt-8">
           <h3 className="text-xl font-bold">{body('Text3')}</h3>
           <div className="w-[45%] mt-4 mb-4 h-[3px] bg-[#5d5d5d]"></div>

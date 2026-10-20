@@ -12,7 +12,7 @@ export default function Gallery() {
     <div className="w-full pb-44 flex flex-col items-center ">
       {/* 배너 이미지 */}
 
-      <div className="relative w-full h-[15rem] ">
+      <div className="relative w-full h-60 ">
         <Image
           src={'/image/background/메인배경1.jpg'}
           alt="Banner"

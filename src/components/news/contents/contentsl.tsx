@@ -42,10 +42,10 @@ export default function Contents() {
         {currentSlides.map((index) => (
           <div key={index} className="mb-3 bg-white p-2">
             <div
-              className="h-[21.875rem] lg:h-[25.063rem] flex flex-col cursor-pointer hover:bg-gray-100"
+              className="h-87.5 lg:h-[25.063rem] flex flex-col cursor-pointer hover:bg-gray-100"
               onClick={() => openModal(index)}
             >
-              <div className="relative w-full mb-4 h-[10.5rem]">
+              <div className="relative w-full mb-4 h-42">
                 <Image
                   src={`/image/news/img (${index}).jpg`}
                   alt="news"
@@ -86,7 +86,7 @@ export default function Contents() {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal}
         >
           <div
