@@ -26,12 +26,12 @@ export default function Copyright() {
       <div className="flex flex-col w-[70vw] mt-28 ">
         <h1 className="font-bold text-2xl">{body('Text1')}</h1>
         <h2 className="font-medium text-lg">{body('Text2')}</h2>
-        <div className="w-auto h-60 border border-slate-200 mt-20 flex items-center justify-center ">
-          <div className="w-44 h-44 mr-24">
-            <Logo1 className="w-full h-full object-contain" />
+        <div className="mt-20 py-10 px-6 border border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16 lg:gap-24">
+          <div className="w-32 sm:w-36 lg:w-44">
+            <Logo1 className="w-full h-auto" />
           </div>
-          <div className="w-72 h-72">
-            <Logo2 className="w-full h-full object-contain" />
+          <div className="w-56 sm:w-60 lg:w-72">
+            <Logo2 className="w-full h-auto" />
           </div>
         </div>
       </div>

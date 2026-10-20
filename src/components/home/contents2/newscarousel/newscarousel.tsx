@@ -79,7 +79,7 @@ export default function NewsCarousel() {
             className="relative px-1 lg:px-4 xl:px-6 2xl:px-8 pt-14 "
           >
             <div
-              className="h-87.5 lg:h-[25.063rem] flex flex-col cursor-pointer  hover:bg-gray-100 "
+              className="pb-4 flex flex-col cursor-pointer hover:bg-gray-100"
               onClick={() => openModal(index)}
             >
               <div className="relative w-full mb-4 h-38">
@@ -110,17 +110,18 @@ export default function NewsCarousel() {
           onClick={closeModal}
         >
           <div
-            className="relative bg-white rounded-lg p-6 w-[80vw] h-[60vh] max-w-4xl mx-4 lg:mx-auto"
+            className="relative bg-white rounded-lg p-6 pt-10 w-[90vw] lg:w-[80vw] max-w-4xl max-h-[85vh] overflow-y-auto mx-4 lg:mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2 text-gray-400 "
+              className="absolute top-1 right-1 w-9 h-9 flex items-center justify-center text-gray-400 hover:text-gray-700"
+              aria-label="Close"
               onClick={closeModal}
             >
               &#x2715;
             </button>
-            <div className="flex flex-col lg:flex-row h-full">
-              <div className="relative w-full lg:w-1/2 h-1/2 lg:h-full">
+            <div className="flex flex-col lg:flex-row lg:h-[50vh]">
+              <div className="relative w-full aspect-4/3 lg:aspect-auto lg:w-1/2 lg:h-full">
                 <Image
                   src={`/image/news/img (${selectedSlide}).jpg`}
                   alt="news"

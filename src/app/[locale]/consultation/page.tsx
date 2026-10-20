@@ -29,7 +29,7 @@ export default function Consultation() {
       </div>
 
       {/* 지도와 텍스트 */}
-      <div className="px-[10vw] mt-[-100px] bg-white">
+      <div className="relative z-10 px-[10vw] mt-[-100px]">
         <KakaoMap />
 
         <div className="w-full mt-8 mb-8 h-[3.5px] bg-[#5d5d5d]"></div>

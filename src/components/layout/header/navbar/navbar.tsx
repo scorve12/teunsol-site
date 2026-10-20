@@ -25,7 +25,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           isScrolled
             ? 'bg-white text-black shadow-lg'
             : isMainPage
-              ? 'bg-black/15 text-white'
+              ? 'bg-linear-to-b from-black/50 to-black/10 text-white'
               : 'bg-white text-black shadow-lg'
         }`}
       >

@@ -49,7 +49,8 @@
     "Text6": "Public Transportation",
     "Text7": "Public Transportation Guide",
     "Text8": "Subway: Gwangju Line 1, Pyeongdong Station Exit 3, 200m",
-    "Text9": "Bus: Pyeongdong Station (East), Air Force Base Back Gate"
+    "Text9": "Bus: Pyeongdong Station (East), Air Force Base Back Gate",
+    "MapLink": "View on Kakao Map"
   },
   "Copyright": {
     "Text1": "Logo",

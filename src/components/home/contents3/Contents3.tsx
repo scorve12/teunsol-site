@@ -4,8 +4,8 @@ import Text1 from './text/text1';
 export default function Contents3() {
   return (
     <>
-      <section className="h-[11.251rem] lg:h-[16.563rem] w-screen flex justify-center items-center  flex-col ">
-        <span className="text-2xl lg:text-4xl text-black mb-7 text-semibold">
+      <section className="w-full py-16 lg:py-24 px-6 flex justify-center items-center flex-col text-center">
+        <span className="text-2xl lg:text-4xl text-black mb-5 lg:mb-7 font-semibold">
           ABOUT TEUNSOL
         </span>
         <Text1 />

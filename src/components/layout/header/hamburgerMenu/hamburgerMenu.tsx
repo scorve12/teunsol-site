@@ -2,10 +2,18 @@
 
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx';
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
+// 메뉴 항목 (번역 키, 경로)
+const navItems = [
+  { key: 'Nav1', path: '' },
+  { key: 'Nav2', path: '/consultation' },
+  { key: 'Nav3', path: '/gallery' },
+  { key: 'Nav4', path: '/copyright' },
+  { key: 'Nav5', path: '/news' },
+] as const;
 
 export default function HamburgerMenu() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -24,12 +32,14 @@ export default function HamburgerMenu() {
   return (
     <>
       {/* 햄버거 버튼 */}
-      <div className="lg:hidden flex items-center absolute right-6 cursor-pointer">
-        <RxHamburgerMenu
-          className="text-3xl cursor-pointer"
-          onClick={toggleDropdown}
-        />
-      </div>
+      <button
+        className="lg:hidden flex items-center justify-center absolute right-4 w-11 h-11"
+        onClick={toggleDropdown}
+        aria-label="Open menu"
+        aria-expanded={dropdownOpen}
+      >
+        <RxHamburgerMenu className="text-3xl" />
+      </button>
       {/* 모달 오버레이 */}
       {dropdownOpen && (
         <div
@@ -39,61 +49,39 @@ export default function HamburgerMenu() {
       )}
       {/* 모달 */}
       <div
-        className={`text-white fixed top-0 right-0 h-full w-80 flex flex-col  bg-[#444A53FA] z-50 transform transition-transform duration-300 ${
-          dropdownOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`text-white fixed top-0 right-0 h-full w-80 max-w-[85vw] flex flex-col bg-[#444A53FA] z-50 transform transition-[transform,visibility] duration-300 ${
+          dropdownOpen ? 'translate-x-0' : 'translate-x-full invisible'
         }`}
       >
-        <div className="h-[5%] px-4 bg-black flex justify-between items-center border-b border-gray-400 text-sm ">
+        <div className="h-14 shrink-0 pl-4 pr-1 bg-black flex justify-between items-center border-b border-gray-400 text-sm">
           <span>Teunsol International</span>
-          <span className="text-base cursor-pointer " onClick={closeDropdown}>
-            X
-          </span>
+          <button
+            className="w-11 h-11 flex items-center justify-center text-xl"
+            onClick={closeDropdown}
+            aria-label="Close menu"
+          >
+            <RxCross2 />
+          </button>
         </div>
-          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer ">
-            {pathname === `/${locale}` ? (
-              <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav1')}</span>
-            ) : (
-              <Link href={`/${locale}`}>
-                <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav1')}</span>
+        <nav className="flex flex-col">
+          {navItems.map(({ key, path }) => {
+            const href = `/${locale}${path}`;
+            const isCurrent = pathname === href;
+            return (
+              <Link
+                key={key}
+                href={href}
+                onClick={closeDropdown}
+                aria-current={isCurrent ? 'page' : undefined}
+                className={`h-14 px-4 flex items-center text-base border-b border-gray-700 ${
+                  isCurrent ? 'bg-white/10 font-semibold' : 'hover:bg-white/5'
+                }`}
+              >
+                {header(key)}
               </Link>
-            )}
-          </div>      
-          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer ">
-          {pathname === `/${locale}/consultation` ? (
-              <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav2')}</span>
-            ) : (
-              <Link href={`/${locale}/consultation`}>
-                <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav2')}</span>
-              </Link>
-            )}
-          </div>
-          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">
-          {pathname === `/${locale}/gallery` ? (
-              <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav3')}</span>
-            ) : (
-              <Link href={`/${locale}/gallery`}>
-                <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav3')}</span>
-              </Link>
-            )}
-          </div>
-          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">
-          {pathname === `/${locale}/copyright` ? (
-              <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav4')}</span>
-            ) : (
-              <Link href={`/${locale}/copyright`}>
-                <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav4')}</span>
-              </Link>
-            )}
-          </div>
-          <div className="text-sm h-[6.7%] border-b border-gray-700 flex items-center px-4 cursor-pointer  ">      
-          {pathname === `/${locale}/news` ? (
-              <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav5')}</span>
-            ) : (
-              <Link href={`/${locale}/news`}>
-                <span className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">{header('Nav5')}</span>
-              </Link>
-            )}
-          </div>
+            );
+          })}
+        </nav>
       </div>
     </>
   );

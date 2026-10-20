@@ -8,9 +8,7 @@ export default function Contents() {
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8; // 페이지당 표시할 슬라이드 수
-  const slides = [
-    1, 2, 3, 4, 5, 6, 7
-  ]; // 전체 슬라이드
+  const slides = [1, 2, 3, 4, 5, 6, 7]; // 전체 슬라이드
   const totalPages = Math.ceil(slides.length / itemsPerPage);
 
   const openModal = (slide: any) => {
@@ -42,7 +40,7 @@ export default function Contents() {
         {currentSlides.map((index) => (
           <div key={index} className="mb-3 bg-white p-2">
             <div
-              className="h-87.5 lg:h-[25.063rem] flex flex-col cursor-pointer hover:bg-gray-100"
+              className="h-full pb-4 flex flex-col cursor-pointer hover:bg-gray-100"
               onClick={() => openModal(index)}
             >
               <div className="relative w-full mb-4 h-42">
@@ -63,26 +61,27 @@ export default function Contents() {
               <span className="mb-4 text-sm lg:text-base text-gray-500 contents-text-overflow">
                 {body(`content${index}.sub`)}
               </span>
-              
             </div>
           </div>
         ))}
       </div>
 
-      {/* 페이지네이션  */}
-      <div className="flex justify-center mt-6">
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i + 1}
-            className={`px-3 py-1 mx-1 border ${
-              currentPage === i + 1 ? 'bg-gray-300' : 'bg-white'
-            }`}
-            onClick={() => handlePageChange(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </div>
+      {/* 페이지네이션 (2페이지 이상일 때만) */}
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-6">
+          {[...Array(totalPages)].map((_, i) => (
+            <button
+              key={i + 1}
+              className={`px-3 py-1 mx-1 border ${
+                currentPage === i + 1 ? 'bg-gray-300' : 'bg-white'
+              }`}
+              onClick={() => handlePageChange(i + 1)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      )}
 
       {isOpen && (
         <div
@@ -90,17 +89,18 @@ export default function Contents() {
           onClick={closeModal}
         >
           <div
-            className="relative bg-white rounded-lg p-6 w-[80vw] h-[60vh] max-w-4xl mx-4 lg:mx-auto"
+            className="relative bg-white rounded-lg p-6 pt-10 w-[90vw] lg:w-[80vw] max-w-4xl max-h-[85vh] overflow-y-auto mx-4 lg:mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2 text-gray-400"
+              className="absolute top-1 right-1 w-9 h-9 flex items-center justify-center text-gray-400 hover:text-gray-700"
+              aria-label="Close"
               onClick={closeModal}
             >
               &#x2715;
             </button>
-            <div className="flex flex-col lg:flex-row h-full">
-              <div className="relative w-full lg:w-1/2 h-1/2 lg:h-full">
+            <div className="flex flex-col lg:flex-row lg:h-[50vh]">
+              <div className="relative w-full aspect-4/3 lg:aspect-auto lg:w-1/2 lg:h-full">
                 <Image
                   src={`/image/news/img (${selectedSlide}).jpg`}
                   alt="news"
@@ -111,10 +111,10 @@ export default function Contents() {
               </div>
               <div className="lg:pl-4 flex flex-col justify-center lg:w-1/2">
                 <h3 className="text-lg font-medium leading-6 text-gray-900 mt-6 lg:mt-0">
-                {body(`content${selectedSlide}.title`)}
+                  {body(`content${selectedSlide}.title`)}
                 </h3>
                 <p className="mt-2 text-sm text-gray-500">
-                {body(`content${selectedSlide}.sub`)}
+                  {body(`content${selectedSlide}.sub`)}
                 </p>
               </div>
             </div>
